@@ -67,6 +67,7 @@ jobs:
 
       - name: Context
         run: |
+          az login
           az account show
 
       - name: Install Terraform
