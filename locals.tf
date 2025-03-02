@@ -1,0 +1,31 @@
+locals {
+  default_commit_email = "filip.vagner@azureatnight.com"
+  free_plan            = "free"
+
+  resource_providers_to_register = {
+    atn-management = {
+      resource_provider = "Microsoft.App"
+    }
+  }
+
+  tags = {
+    scenario = "default"
+  }
+
+  excluded_regions = [
+  ]
+  included_regions = [
+    "cenrtalus",
+    "eastus",
+  ]
+  regions         = local.included_regions
+  selected_region = "centralus"
+
+  compute_types = [
+    "azure_container_instance"
+  ]
+
+  approvers = [
+    "filipvagner"
+  ]
+}
