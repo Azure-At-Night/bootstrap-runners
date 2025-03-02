@@ -5,7 +5,7 @@ on:
     inputs:
       root_module_folder_relative_path:
         description: 'Root Module Folder Relative Path'
-        default: '.'
+        required: true
         type: string
 
 jobs:
