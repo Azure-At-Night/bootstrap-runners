@@ -78,7 +78,7 @@ jobs:
 
       - name: Terraform Init
         run: |
-          cd /${{ github.event.inputs.terraform_folder }}
+          cd ${{ github.event.inputs.terraform_folder }}
           terraform \
           init \
           -backend-config="resource_group_name=${{vars.BACKEND_AZURE_RESOURCE_GROUP_NAME}}" \
