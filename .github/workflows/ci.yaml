@@ -61,6 +61,14 @@ jobs:
             exit 1
           fi
 
+      - name: Az CLI Version
+        run: |
+          az --version
+
+      - name: Context
+        run: |
+          az account show
+
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
         with:
