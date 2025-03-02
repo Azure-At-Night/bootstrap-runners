@@ -12,7 +12,7 @@ jobs:
   validate:
     name: Validate Terraform
     runs-on:
-      ${runner_name}
+      self-hosted
     environment: ${environment_name_plan}
     steps:
       - name: Checkout Code
