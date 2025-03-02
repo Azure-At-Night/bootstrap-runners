@@ -34,7 +34,7 @@ jobs:
       - name: Terraform Format Check
         run: |
           terraform \
-          -chdir="$${{inputs.root_module_folder_relative_path}}" \
+          -chdir="${{ inputs.root_module_folder_relative_path }}" \
           fmt \
           -check
 
