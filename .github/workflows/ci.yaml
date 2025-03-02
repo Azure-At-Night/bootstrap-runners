@@ -21,7 +21,7 @@ jobs:
     name: Validate Terraform
     runs-on:
       self-hosted
-    environment: $${{environment_name}}
+    environment: ${{ inputs.environment_name }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
