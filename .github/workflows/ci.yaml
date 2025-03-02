@@ -67,7 +67,7 @@ jobs:
 
       - name: Context
         run: |
-          az login --identity --username ${{ vars.AZURE_CLIENT_ID }}
+          az login --identity --client-id ${{ vars.AZURE_CLIENT_ID }}
           az account show
 
       - name: Install Terraform
