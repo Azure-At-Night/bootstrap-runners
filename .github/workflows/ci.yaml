@@ -24,9 +24,15 @@ jobs:
       self-hosted
     environment: ${{ inputs.environment_name }}
     steps:
-      - name: Show content
+      - name: Show current directory
         run: |
           pwd
+      
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Show content
+        run: |
           ls -l
 
       - name: Check Path
@@ -40,8 +46,7 @@ jobs:
             exit 1
           fi
 
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      
 
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
