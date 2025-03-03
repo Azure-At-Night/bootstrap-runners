@@ -2,7 +2,7 @@ resource "github_repository" "bootstrap_runners" {
   name                 = "bootstrap-runners"
   description          = "This is repository for bootstrap runners"
   auto_init            = true
-  visibility           = "private"
+  visibility           = "public"
   allow_update_branch  = true
   allow_merge_commit   = true
   allow_rebase_merge   = false

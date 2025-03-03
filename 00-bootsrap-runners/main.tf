@@ -42,5 +42,8 @@ resource "azurerm_federated_identity_credential" "github_runners" {
   audience            = ["api://AzureADTokenExchange"]
   issuer              = "https://token.actions.githubusercontent.com"
   parent_id           = module.github_runners.user_assigned_managed_identity_id
-  subject             = "repo:Azure-At-Night/bootstrap-runners:ref:refs/heads/main"
+  subject             = "repo:Azure-At-Night/bootstrap-runners:environment:dev"
 }
+
+#TODO Assign role Storage Blob Data Contributor to the managed identity
+#TODO Assign role on Managent group level to the managed identity

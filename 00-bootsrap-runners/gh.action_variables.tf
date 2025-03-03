@@ -1,11 +1,21 @@
 # resource "github_actions_environment_variable" "azure_plan_client_id" {
-#   for_each      = var.environments
-
 #   repository    = github_repository.bootstrap_runners.name
-#   environment   = github_repository_environment.alz[each.key].environment
+#   #environment   = github_repository_environment.alz[each.key].environment
 #   variable_name = "AZURE_CLIENT_ID"
 #   value         = var.managed_identity_client_ids[each.key]
 # }
+
+resource "github_actions_variable" "azure_client_id" {
+  repository    = github_repository.bootstrap_runners.name
+  variable_name = "AZURE_CLIENT_ID"
+  value         = var.azure_client_id
+}
+
+resource "github_actions_variable" "azure_client_gh_learn_id" {
+  repository    = github_repository.bootstrap_runners.name
+  variable_name = "AZURE_CLIENT_ID_GH_LEARN"
+  value         = "bc28f575-35f1-4937-95fd-d7e25cba513f"
+}
 
 resource "github_actions_variable" "azure_subscription_id" {
   repository    = github_repository.bootstrap_runners.name

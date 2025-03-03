@@ -3,6 +3,11 @@ variable "management_subscription_id" {
   description = "The subscription ID for management."
 }
 
+variable "azure_client_id" {
+  type        = string
+  description = "The id of User assigned managed identity containing runners."
+}
+
 variable "azure_subscription_id" {
   type        = string
   description = "Subscription ID where is storage account name for TF state."

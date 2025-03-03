@@ -26,6 +26,21 @@ locals {
   ]
 
   approvers = [
-    "filipvagner"
+    #"filipvagner"
   ]
+
+  environments = {
+    "dev" = {
+      name = "dev"
+      protected = false
+    }
+    "staging" = {
+      name = "staging"
+      protected = false
+    }
+    "prod" = {
+      name = "prod"
+      protected = true
+    }
+  }
 }
