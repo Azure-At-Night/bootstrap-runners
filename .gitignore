@@ -1,5 +1,6 @@
 # Custom files
 backend.config
+.DS_Store
 
 # Local .terraform directories
 **/.terraform/*
