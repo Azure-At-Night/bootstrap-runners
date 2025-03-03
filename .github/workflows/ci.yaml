@@ -87,11 +87,11 @@ jobs:
           -backend-config="container_name=${{ github.event.inputs.terraform_folder }}" \
           -backend-config="key=terraform.tfstate"
 
-      # - name: Terraform Validate
-      #   run: |
-      #     terraform \
-      #     -chdir="$${{github.event.inputs.terraform_folder}}" \
-      #     validate
+      - name: Terraform Validate
+        run: |
+          terraform \
+          -chdir="$${{github.event.inputs.terraform_folder}}" \
+          validate
 
   # plan:
   #   name: Validate Terraform Plan
